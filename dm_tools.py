@@ -6,7 +6,7 @@ from sklearn.tree import export_graphviz
 
 def data_prep():
     # read the pva97nk dataset
-    df = pd.read_csv('pva97nk.csv')
+    df = pd.read_csv('datasets/pva97nk.csv')
     
     # change DemCluster from interval/integer to nominal/str
     df['DemCluster'] = df['DemCluster'].astype(str)
