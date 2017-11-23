@@ -48,6 +48,9 @@ def analyse_feature_importance(dm_model, feature_names, n_to_display=20):
 
 def visualize_decision_tree(dm_model, feature_names, save_name):
     import pydot
+    from io import StringIO
+    from sklearn.tree import export_graphviz
+    
     dotfile = StringIO()
     export_graphviz(dm_model, out_file=dotfile, feature_names=feature_names)
     graph = pydot.graph_from_dot_data(dotfile.getvalue())
