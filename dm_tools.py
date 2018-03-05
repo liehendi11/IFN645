@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 
 def data_prep():
-    # read the pva97nk dataset
-    df = pd.read_csv('datasets/pva97nk.csv')
+    # read the veteran dataset
+    df = pd.read_csv('datasets/veteran.csv')
     
     # change DemCluster from interval/integer to nominal/str
     df['DemCluster'] = df['DemCluster'].astype(str)
